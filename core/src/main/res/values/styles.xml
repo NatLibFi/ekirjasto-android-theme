@@ -174,7 +174,7 @@
         <item name="android:drawableTintMode">multiply</item>
         <item name="android:drawableTint">@color/palace_button_outlined_text_color</item>
         <item name="android:scrollbars">none</item>
-        <item name="strokeColor">@color/palace_button_outlined_text_color</item>
+        <item name="strokeColor">@color/PalacePrimaryForegroundColor</item>
         <item name="rippleColor">#cccccc</item>
         <item name="shapeAppearance">@style/ShapeAppearance.Material3.Corner.Small</item>
     </style>

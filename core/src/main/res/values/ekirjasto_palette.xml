@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Colors from Styleguide -->
+    <color name="EkirjastoGreen">#3FB8AF</color>
+    <color name="EkirjastoLightGreen">#8AD2CD</color>
+    <color name="EkirjastoLightestGreen">#D9F1EF</color>
+    <color name="EkirjastoYellow">#F0F1C2</color>
+    <color name="EkirjastoBlack">#1E1E1E</color>
+    <color name="EkirjastoGrey">#9A9A9A</color>
+    <color name="EkirjastoLightGrey">#D8D8D8</color>
+    <color name="EkirjastoWhite">#FFFFFF</color>
+</resources>

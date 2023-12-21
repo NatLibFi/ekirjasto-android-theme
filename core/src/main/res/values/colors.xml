@@ -5,45 +5,46 @@
 -->
 
 <resources>
-    <color name="PalaceDialogBackgroundColor">@color/PalaceGrey3</color>
+    <color name="PalaceDialogBackgroundColor">@color/EkirjastoWhite</color>
     <color name="PalaceError">@color/PalaceRed2</color>
-    <color name="PalaceMenuBackgroundColor">@color/PalaceGrey3</color>
-    <color name="PalacePrimaryForegroundColor">@color/PalaceGrey0</color>
-    <color name="PalaceScreenBackgroundColor">@color/PalaceGrey3</color>
-    <color name="PalaceInvertedBackgroundColor">@color/PalaceGrey0</color>
+    <color name="PalaceMenuBackgroundColor">@color/EkirjastoLightestGreen</color>
+    <color name="PalacePrimaryForegroundColor">@color/EkirjastoGreen</color>
+    <color name="PalaceScreenBackgroundColor">@color/EkirjastoWhite</color>
+    <color name="PalaceInvertedBackgroundColor">@color/EkirjastoBlack</color>
 
     <!-- Contained buttons. -->
-    <color name="PalaceButtonContainedBackgroundColor">@color/PalaceGrey0</color>
-    <color name="PalaceButtonContainedDisabledBackgroundColor">@color/PalaceGrey1</color>
-    <color name="PalaceButtonContainedDisabledTextColor">@color/PalaceGrey2</color>
-    <color name="PalaceButtonContainedTextColor">@color/PalaceGrey3</color>
+    <color name="PalaceButtonContainedBackgroundColor">@color/EkirjastoLightGreen</color>
+    <color name="PalaceButtonContainedDisabledBackgroundColor">@color/EkirjastoLightestGreen</color>
+    <color name="PalaceButtonContainedDisabledTextColor">@color/EkirjastoGrey</color>
+    <color name="PalaceButtonContainedTextColor">@color/EkirjastoBlack</color>
 
     <!-- Outline buttons. -->
-    <color name="PalaceButtonOutlinedBackgroundColor">@color/PalaceGrey3</color>
-    <color name="PalaceButtonOutlinedDisabledBackgroundColor">@color/PalaceGrey3</color>
-    <color name="PalaceButtonOutlinedDisabledTextColor">@color/PalaceGrey1</color>
-    <color name="PalaceButtonOutlinedTextColor">@color/PalaceGrey0</color>
+    <color name="PalaceButtonOutlinedBackgroundColor">@color/EkirjastoWhite</color>
+    <color name="PalaceButtonOutlinedDisabledBackgroundColor">@color/EkirjastoLightGrey</color>
+    <color name="PalaceButtonOutlinedDisabledTextColor">@color/EkirjastoGrey</color>
+    <color name="PalaceButtonOutlinedTextColor">@color/EkirjastoBlack</color>
+    <color name="PalaceButtonOutlinedOutlineColor">@color/EkirjastoGreen</color>
 
     <!-- Text buttons. -->
-    <color name="PalaceButtonTextBackgroundColor">@color/PalaceGrey3</color>
-    <color name="PalaceButtonTextDisabledBackgroundColor">@color/PalaceGrey3</color>
-    <color name="PalaceButtonTextDisabledTextColor">@color/PalaceGrey1</color>
-    <color name="PalaceButtonTextTextColor">@color/PalaceGrey0</color>
+    <color name="PalaceButtonTextBackgroundColor">@color/EkirjastoWhite</color>
+    <color name="PalaceButtonTextDisabledBackgroundColor">@color/EkirjastoWhite</color>
+    <color name="PalaceButtonTextDisabledTextColor">@color/EkirjastoGrey</color>
+    <color name="PalaceButtonTextTextColor">@color/EkirjastoBlack</color>
 
     <!-- Status bar. -->
-    <color name="PalaceStatusBarColor">@color/PalaceGrey0</color>
+    <color name="PalaceStatusBarColor">@color/EkirjastoLightGreen</color>
 
     <!-- Switches -->
-    <color name="PalaceSwitchThumbColorChecked">@color/PalaceGrey3</color>
-    <color name="PalaceSwitchThumbColorUnchecked">@color/PalaceGrey0</color>
-    <color name="PalaceSwitchTrackColorChecked">@color/PalaceGrey0</color>
-    <color name="PalaceSwitchTrackColorUnchecked">@color/PalaceGrey2</color>
+    <color name="PalaceSwitchThumbColorChecked">@color/EkirjastoBlack</color>
+    <color name="PalaceSwitchThumbColorUnchecked">@color/EkirjastoGrey</color>
+    <color name="PalaceSwitchTrackColorChecked">@color/EkirjastoGreen</color>
+    <color name="PalaceSwitchTrackColorUnchecked">@color/EkirjastoLightestGreen</color>
 
     <!-- Text -->
-    <color name="PalaceTextColor">@color/PalaceGrey0</color>
-    <color name="PalaceTextHintColor">@color/PalaceGrey2</color>
-    <color name="PalaceTextInvertedColor">@color/PalaceGrey3</color>
+    <color name="PalaceTextColor">@color/EkirjastoBlack</color>
+    <color name="PalaceTextHintColor">@color/EkirjastoLightGrey</color>
+    <color name="PalaceTextInvertedColor">@color/EkirjastoWhite</color>
 
     <!-- Dividers -->
-    <color name="PalaceDividerColor">@color/PalaceGrey2</color>
+    <color name="PalaceDividerColor">@color/EkirjastoLightestGreen</color>
 </resources>
