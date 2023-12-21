@@ -215,19 +215,21 @@
         <item name="backgroundTint">@color/PalaceScreenBackgroundColor</item>
         <item name="labelVisibilityMode">labeled</item>
         <item name="itemActiveIndicatorStyle">@style/Palace.BottomNavigationView.Indicator</item>
+        <item name="itemTextColor">@color/PalaceButtonTextTextColor</item>
         <item name="itemTextAppearanceActive">@style/Palace.BottomNavigationView.TextActive</item>
     </style>
 
     <style name="Palace.BottomNavigationView.TextActive" parent="">
         <item name="android:textSize">13sp</item>
+        <item name="android:color">@color/PalaceButtonTextTextColor</item>
     </style>
 
     <style name="Palace.BottomNavigationView.Overlay" parent="">
-        <item name="colorSurface">@color/PalaceTextColor</item>
+        <item name="colorSurface">@color/PalacePrimaryForegroundColor</item>
     </style>
 
     <style name="Palace.BottomNavigationView.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
-        <item name="android:color">@color/PalaceTextColor</item>
+        <item name="android:color">@color/PalaceButtonTextTextColor</item>
         <item name="shapeAppearance">@style/ShapeAppearance.Material3.Corner.None</item>
         <item name="android:width">0dp</item>
         <item name="android:height">0dp</item>

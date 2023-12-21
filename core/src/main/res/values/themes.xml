@@ -7,7 +7,7 @@
 
     <style name="PalaceTheme.WithActionBar" parent="Theme.Material3.DayNight">
         <item name="android:windowBackground">@color/PalaceScreenBackgroundColor</item>
-        <item name="android:fontFamily">@font/open_sans_regular</item>
+        <item name="android:fontFamily">@font/asap_regular</item>
 
         <!-- https://github.com/material-components/material-components-android/blob/master/docs/theming/Color.md#using-the-color-theming-system -->
         <item name="colorPrimary">@color/EkirjastoGreen</item>
@@ -20,6 +20,8 @@
         <item name="colorOnBackground">@color/EkirjastoBlack</item>
         <item name="colorError">@color/PalaceError</item>
         <item name="colorOnError">@color/EkirjastoWhite</item>
+        <item name="colorOnSurfaceVariant">@color/EkirjastoLightGreen</item>
+        <item name="colorOnSecondaryContainer">@color/EkirjastoGreen</item>
 
         <!-- The color accent for legacy non-Material components. -->
         <item name="colorAccent">@color/PalaceTextColor</item>
@@ -43,19 +45,21 @@
 
     <style name="PalaceTheme.WithoutActionBar" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="android:windowBackground">@color/PalaceScreenBackgroundColor</item>
-        <item name="android:fontFamily">@font/open_sans_regular</item>
+        <item name="android:fontFamily">@font/asap_regular</item>
 
         <!-- https://github.com/material-components/material-components-android/blob/master/docs/theming/Color.md#using-the-color-theming-system -->
-        <item name="colorPrimary">@color/PalaceGrey0</item>
-        <item name="colorPrimaryVariant">@color/PalaceGrey0</item>
-        <item name="colorOnPrimary">@color/PalaceGrey3</item>
-        <item name="colorSurface">@color/PalaceGrey3</item>
-        <item name="colorSecondary">@color/PalaceGrey3</item>
-        <item name="colorSecondaryVariant">@color/PalaceGrey3</item>
-        <item name="colorOnSecondary">@color/PalaceGrey0</item>
-        <item name="colorOnBackground">@color/PalaceGrey0</item>
+        <item name="colorPrimary">@color/EkirjastoGreen</item>
+        <item name="colorPrimaryVariant">@color/EkirjastoBlack</item>
+        <item name="colorOnPrimary">@color/EkirjastoBlack</item>
+        <item name="colorSurface">@color/EkirjastoWhite</item>
+        <item name="colorSecondary">@color/EkirjastoLightGreen</item>
+        <item name="colorSecondaryVariant">@color/EkirjastoWhite</item>
+        <item name="colorOnSecondary">@color/EkirjastoBlack</item>
+        <item name="colorOnBackground">@color/EkirjastoBlack</item>
         <item name="colorError">@color/PalaceError</item>
-        <item name="colorOnError">@color/PalaceGrey3</item>
+        <item name="colorOnError">@color/EkirjastoWhite</item>
+        <item name="colorOnSurfaceVariant">@color/EkirjastoLightGreen</item>
+        <item name="colorOnSecondaryContainer">@color/EkirjastoGreen</item>
 
         <!-- The color accent for legacy non-Material components. -->
         <item name="colorAccent">@color/PalaceTextColor</item>
