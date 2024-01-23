@@ -396,12 +396,12 @@ fun createScandoAnalyzeTask(project: Project): Task {
  * Create a task in the root project that downloads Scando.
  */
 
-lateinit var scandoDownloadTask: Task
+//lateinit var scandoDownloadTask: Task
 
-rootProject.afterEvaluate {
-    apply(plugin = "de.undercouch.download")
-    scandoDownloadTask = createScandoDownloadTask(this)
-}
+//rootProject.afterEvaluate {
+//    apply(plugin = "de.undercouch.download")
+//    scandoDownloadTask = createScandoDownloadTask(this)
+//}
 
 /**
  * A function to download and verify the ktlint jar file.
