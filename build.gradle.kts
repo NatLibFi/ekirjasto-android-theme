@@ -738,15 +738,15 @@ allprojects {
      * Configure publishing.
      */
 
-    when (extra["POM_PACKAGING"]) {
-        "jar", "aar" -> {
-            apply(plugin = "maven-publish")
-
-            afterEvaluate {
-                configurePublishingFor(this.project)
-            }
-        }
-    }
+//    when (extra["POM_PACKAGING"]) {
+//        "jar", "aar" -> {
+//            apply(plugin = "maven-publish")
+//
+//            afterEvaluate {
+//                configurePublishingFor(this.project)
+//            }
+//        }
+//    }
 
     /*
      * Configure some aggressive version resolution behaviour. The listed configurations have
