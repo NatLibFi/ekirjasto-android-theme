@@ -144,161 +144,161 @@ fun propertyBooleanOptional(
  * so that they can be pushed to Maven Central in one step using brooklime.
  */
 
-fun configurePublishingFor(project: Project) {
-    val mavenCentralUsername =
-        (project.findProperty("mavenCentralUsername") ?: "") as String
-    val mavenCentralPassword =
-        (project.findProperty("mavenCentralPassword") ?: "") as String
-
-    val versionName =
-        property(project, "VERSION_NAME")
-    val packaging =
-        property(project, "POM_PACKAGING")
-
-    val publishSources =
-        propertyBoolean(project, "org.thepalaceproject.build.publishSources")
-    val enableSigning =
-        propertyBooleanOptional(project, "org.thepalaceproject.build.enableSigning", true)
-
-    /*
-     * Create an empty JavaDoc jar. Required for Maven Central deployments.
-     */
-
-    val taskJavadocEmpty =
-        project.task("JavadocEmptyJar", org.gradle.jvm.tasks.Jar::class) {
-            this.archiveClassifier = "javadoc"
-        }
-
-    /*
-     * Create a publication. Note that the name of the publication must be unique across all
-     * modules, because the broken Gradle signing plugin will create a signing task for each
-     * one that, in the case of a name conflict, will silently overwrite the previous signing
-     * task.
-     */
-
-    project.publishing {
-        publications {
-            create<MavenPublication>("_${project.name}_MavenPublication") {
-                groupId = property(project, "GROUP")
-                artifactId = property(project, "POM_ARTIFACT_ID")
-                version = versionName
-
-                /*
-                 * https://central.sonatype.org/publish/requirements/#sufficient-metadata
-                 */
-
-                pom {
-                    name.set(property(project, "POM_NAME"))
-                    description.set(property(project, "POM_DESCRIPTION"))
-                    url.set(property(project, "POM_URL"))
-
-                    scm {
-                        connection.set(property(project, "POM_SCM_CONNECTION"))
-                        developerConnection.set(property(project, "POM_SCM_DEV_CONNECTION"))
-                        url.set(property(project, "POM_SCM_URL"))
-                    }
-
-                    licenses {
-                        license {
-                            name.set(property(project, "POM_LICENCE_NAME"))
-                            url.set(property(project, "POM_LICENCE_URL"))
-                        }
-                    }
-
-                    developers {
-                        developer {
-                            name.set("The Palace Project")
-                            email.set("info@thepalaceproject.org")
-                            organization.set("The Palace Project")
-                            organizationUrl.set("https://thepalaceproject.org/")
-                        }
-                    }
-                }
-
-                artifact(taskJavadocEmpty)
-
-                from(
-                    when (packaging) {
-                        "jar" -> {
-                            project.components["java"]
-                        }
-
-                        "aar" -> {
-                            project.components["release"]
-                        }
-
-                        "apk" -> {
-                            project.components["release"]
-                        }
-
-                        else -> {
-                            throw java.lang.IllegalArgumentException(
-                                "Cannot set up publishing for packaging type $packaging",
-                            )
-                        }
-                    },
-                )
-            }
-        }
-
-        repositories {
-            maven {
-                name = "Directory"
-                url = uri(palaceDeployDirectory)
-            }
-
-            /*
-             * Only deploy to the Sonatype snapshots repository if the current version is a
-             * snapshot version.
-             */
-
-            if (versionName.endsWith("-SNAPSHOT")) {
-                maven {
-                    name = "SonatypeCentralSnapshots"
-                    url = uri("https://s01.oss.sonatype.org/content/repositories/snapshots/")
-
-                    credentials {
-                        username = mavenCentralUsername
-                        password = mavenCentralPassword
-                    }
-                }
-            }
-        }
-    }
-
-    /*
-     * If source publications are disabled in the project properties, it seems that the only
-     * way to stop the Android plugins from publishing sources is to manually "disable" the
-     * publication tasks by deleting all of the actions within the tasks, and then specifying
-     * a dependency on our own task that produces an empty jar file.
-     */
-
-    if (!publishSources) {
-        logger.info("org.thepalaceproject.build.publishSources is false, so source jars are disabled.")
-
-        val taskSourcesEmpty =
-            project.task("SourcesEmptyJar", org.gradle.jvm.tasks.Jar::class) {
-                this.archiveClassifier = "sources"
-            }
-
-        project.tasks.matching { task -> task.name.endsWith("SourcesJar") }
-            .forEach { task ->
-                task.actions.clear()
-                task.dependsOn.add(taskSourcesEmpty)
-            }
-    }
-
-    /*
-     * Configure signing.
-     */
-
-    if (enableSigning) {
-        signing {
-            useGpgCmd()
-            sign(project.publishing.publications)
-        }
-    }
-}
+//fun configurePublishingFor(project: Project) {
+//    val mavenCentralUsername =
+//        (project.findProperty("mavenCentralUsername") ?: "") as String
+//    val mavenCentralPassword =
+//        (project.findProperty("mavenCentralPassword") ?: "") as String
+//
+//    val versionName =
+//        property(project, "VERSION_NAME")
+//    val packaging =
+//        property(project, "POM_PACKAGING")
+//
+//    val publishSources =
+//        propertyBoolean(project, "org.thepalaceproject.build.publishSources")
+//    val enableSigning =
+//        propertyBooleanOptional(project, "org.thepalaceproject.build.enableSigning", true)
+//
+//    /*
+//     * Create an empty JavaDoc jar. Required for Maven Central deployments.
+//     */
+//
+//    val taskJavadocEmpty =
+//        project.task("JavadocEmptyJar", org.gradle.jvm.tasks.Jar::class) {
+//            this.archiveClassifier = "javadoc"
+//        }
+//
+//    /*
+//     * Create a publication. Note that the name of the publication must be unique across all
+//     * modules, because the broken Gradle signing plugin will create a signing task for each
+//     * one that, in the case of a name conflict, will silently overwrite the previous signing
+//     * task.
+//     */
+//
+//    project.publishing {
+//        publications {
+//            create<MavenPublication>("_${project.name}_MavenPublication") {
+//                groupId = property(project, "GROUP")
+//                artifactId = property(project, "POM_ARTIFACT_ID")
+//                version = versionName
+//
+//                /*
+//                 * https://central.sonatype.org/publish/requirements/#sufficient-metadata
+//                 */
+//
+//                pom {
+//                    name.set(property(project, "POM_NAME"))
+//                    description.set(property(project, "POM_DESCRIPTION"))
+//                    url.set(property(project, "POM_URL"))
+//
+//                    scm {
+//                        connection.set(property(project, "POM_SCM_CONNECTION"))
+//                        developerConnection.set(property(project, "POM_SCM_DEV_CONNECTION"))
+//                        url.set(property(project, "POM_SCM_URL"))
+//                    }
+//
+//                    licenses {
+//                        license {
+//                            name.set(property(project, "POM_LICENCE_NAME"))
+//                            url.set(property(project, "POM_LICENCE_URL"))
+//                        }
+//                    }
+//
+//                    developers {
+//                        developer {
+//                            name.set("The Palace Project")
+//                            email.set("info@thepalaceproject.org")
+//                            organization.set("The Palace Project")
+//                            organizationUrl.set("https://thepalaceproject.org/")
+//                        }
+//                    }
+//                }
+//
+//                artifact(taskJavadocEmpty)
+//
+//                from(
+//                    when (packaging) {
+//                        "jar" -> {
+//                            project.components["java"]
+//                        }
+//
+//                        "aar" -> {
+//                            project.components["release"]
+//                        }
+//
+//                        "apk" -> {
+//                            project.components["release"]
+//                        }
+//
+//                        else -> {
+//                            throw java.lang.IllegalArgumentException(
+//                                "Cannot set up publishing for packaging type $packaging",
+//                            )
+//                        }
+//                    },
+//                )
+//            }
+//        }
+//
+//        repositories {
+//            maven {
+//                name = "Directory"
+//                url = uri(palaceDeployDirectory)
+//            }
+//
+//            /*
+//             * Only deploy to the Sonatype snapshots repository if the current version is a
+//             * snapshot version.
+//             */
+//
+//            if (versionName.endsWith("-SNAPSHOT")) {
+//                maven {
+//                    name = "SonatypeCentralSnapshots"
+//                    url = uri("https://s01.oss.sonatype.org/content/repositories/snapshots/")
+//
+//                    credentials {
+//                        username = mavenCentralUsername
+//                        password = mavenCentralPassword
+//                    }
+//                }
+//            }
+//        }
+//    }
+//
+//    /*
+//     * If source publications are disabled in the project properties, it seems that the only
+//     * way to stop the Android plugins from publishing sources is to manually "disable" the
+//     * publication tasks by deleting all of the actions within the tasks, and then specifying
+//     * a dependency on our own task that produces an empty jar file.
+//     */
+//
+//    if (!publishSources) {
+//        logger.info("org.thepalaceproject.build.publishSources is false, so source jars are disabled.")
+//
+//        val taskSourcesEmpty =
+//            project.task("SourcesEmptyJar", org.gradle.jvm.tasks.Jar::class) {
+//                this.archiveClassifier = "sources"
+//            }
+//
+//        project.tasks.matching { task -> task.name.endsWith("SourcesJar") }
+//            .forEach { task ->
+//                task.actions.clear()
+//                task.dependsOn.add(taskSourcesEmpty)
+//            }
+//    }
+//
+//    /*
+//     * Configure signing.
+//     */
+//
+//    if (enableSigning) {
+//        signing {
+//            useGpgCmd()
+//            sign(project.publishing.publications)
+//        }
+//    }
+//}
 
 /*
  * A task that cleans up the Maven deployment directory. The "clean" tasks of
@@ -485,29 +485,29 @@ fun createKtlintFormatTask(project: Project): Task {
  * Create a task in the root project that downloads ktlint.
  */
 
-lateinit var ktlintDownloadTask: Task
+//lateinit var ktlintDownloadTask: Task
 
-rootProject.afterEvaluate {
-    apply(plugin = "de.undercouch.download")
-    ktlintDownloadTask = createKtlintDownloadTask(this)
-
-    val enableKtlintChecks =
-        propertyBoolean(this, "org.thepalaceproject.build.enableKtLint")
-
-    if (enableKtlintChecks) {
-        val checkActual = createKtlintCheckTask(this)
-        checkActual.dependsOn.add(ktlintDownloadTask)
-        cleanTask.dependsOn.add(checkActual)
-    }
-
-    /*
-     * Create a task that can be used to reformat sources. This is purely for manual execution
-     * from the command-line, and is not executed otherwise.
-     */
-
-    val formatTask = createKtlintFormatTask(this)
-    formatTask.dependsOn.add(ktlintDownloadTask)
-}
+//rootProject.afterEvaluate {
+//    apply(plugin = "de.undercouch.download")
+//    ktlintDownloadTask = createKtlintDownloadTask(this)
+//
+//    val enableKtlintChecks =
+//        propertyBoolean(this, "org.thepalaceproject.build.enableKtLint")
+//
+//    if (enableKtlintChecks) {
+//        val checkActual = createKtlintCheckTask(this)
+//        checkActual.dependsOn.add(ktlintDownloadTask)
+//        cleanTask.dependsOn.add(checkActual)
+//    }
+//
+//    /*
+//     * Create a task that can be used to reformat sources. This is purely for manual execution
+//     * from the command-line, and is not executed otherwise.
+//     */
+//
+//    val formatTask = createKtlintFormatTask(this)
+//    formatTask.dependsOn.add(ktlintDownloadTask)
+//}
 
 allprojects {
 
@@ -668,22 +668,22 @@ allprojects {
              * Configure semantic versioning analysis.
              */
 
-            afterEvaluate {
-                val enableSemanticVersionChecks =
-                    propertyBoolean(this, "org.thepalaceproject.build.checkSemanticVersioning")
-
-                if (enableSemanticVersionChecks) {
-                    val verifyActual = createScandoAnalyzeTask(this)
-                    verifyActual.dependsOn.add(scandoDownloadTask)
-                    verifyActual.dependsOn.add("assembleDebug")
-
-                    val verifyTask = project.task("verifySemanticVersioning")
-                    verifyTask.dependsOn.add(verifyActual)
-                } else {
-                    // Create a do-nothing task to keep interface compatibility.
-                    project.task("verifySemanticVersioning")
-                }
-            }
+//            afterEvaluate {
+//                val enableSemanticVersionChecks =
+//                    propertyBoolean(this, "org.thepalaceproject.build.checkSemanticVersioning")
+//
+//                if (enableSemanticVersionChecks) {
+//                    val verifyActual = createScandoAnalyzeTask(this)
+//                    verifyActual.dependsOn.add(scandoDownloadTask)
+//                    verifyActual.dependsOn.add("assembleDebug")
+//
+//                    val verifyTask = project.task("verifySemanticVersioning")
+//                    verifyTask.dependsOn.add(verifyActual)
+//                } else {
+//                    // Create a do-nothing task to keep interface compatibility.
+//                    project.task("verifySemanticVersioning")
+//                }
+//            }
         }
 
         "jar" -> {
@@ -810,30 +810,30 @@ allprojects {
      * configurations visible.
      */
 
-    val configurationsActual = mutableSetOf<String>()
-    afterEvaluate {
-        configurations.all {
-            configurationsActual.add(this.name)
-        }
-        File("configurations.txt").writeText(configurationsActual.joinToString("\n"))
-    }
+//    val configurationsActual = mutableSetOf<String>()
+//    afterEvaluate {
+//        configurations.all {
+//            configurationsActual.add(this.name)
+//        }
+//        File("configurations.txt").writeText(configurationsActual.joinToString("\n"))
+//    }
 
-    afterEvaluate {
-        configurations.all {
-            isTransitive = transitiveConfigurations.contains(name)
-            // resolutionStrategy.failOnVersionConflict()
-        }
-    }
+//    afterEvaluate {
+//        configurations.all {
+//            isTransitive = transitiveConfigurations.contains(name)
+//            // resolutionStrategy.failOnVersionConflict()
+//        }
+//    }
 
     /*
      * Configure all "clean" tasks to depend upon the global Maven deployment directory cleaning
      * task.
      */
 
-    afterEvaluate {
-        tasks.matching { task -> task.name == "clean" }
-            .forEach { task -> task.dependsOn(cleanTask) }
-    }
+//    afterEvaluate {
+//        tasks.matching { task -> task.name == "clean" }
+//            .forEach { task -> task.dependsOn(cleanTask) }
+//    }
 
     /*
      * Configure all "test" tasks to be disabled. The tests are enabled only in those modules
@@ -841,8 +841,8 @@ allprojects {
      * expensive per-module configuration for tests that don't exist.
      */
 
-    afterEvaluate {
-        tasks.matching { task -> task.name.contains("UnitTest") }
-            .forEach { task -> task.enabled = false }
-    }
+//    afterEvaluate {
+//        tasks.matching { task -> task.name.contains("UnitTest") }
+//            .forEach { task -> task.enabled = false }
+//    }
 }
