@@ -47,4 +47,8 @@
 
     <!-- Dividers -->
     <color name="PalaceDividerColor">@color/EkirjastoLightestGreen</color>
+
+    <!-- TabButtons -->
+    <color name="EkirjastoTabButtonBackgroundColor">@color/EkirjastoLightGrey</color>
+    <color name="EkirjastoTabButtonDividerColor">@color/EkirjastoGrey</color>
 </resources>

@@ -4,21 +4,23 @@
 
     <item android:state_enabled="false">
         <shape android:shape="rectangle">
-            <corners android:bottomRightRadius="0dp" android:radius="@dimen/PalaceTabButtonCornerRadius" android:topRightRadius="0dp" />
+            <corners android:radius="0dp" />
             <solid android:color="@color/EkirjastoTabButtonBackgroundColor" />
         </shape>
     </item>
 
     <item android:state_checked="true">
-        <layer-list>
-            <item android:drawable="@drawable/ekirjasto_tab_rectangle_left" />
-            <item android:drawable="@drawable/ekirjasto_tab_rounded" />
-        </layer-list>
+        <inset android:insetLeft="@dimen/PalaceTabButtonStrokeInset" android:insetTop="0dp" android:insetRight="@dimen/PalaceTabButtonStrokeInset" android:insetBottom="0dp">
+            <shape android:shape="rectangle">
+                <corners android:radius="16dp" />
+                <solid android:color="@color/PalaceScreenBackgroundColor" />
+            </shape>
+        </inset>
     </item>
 
     <item>
         <shape android:shape="rectangle">
-            <corners android:bottomRightRadius="0dp" android:radius="@dimen/PalaceTabButtonCornerRadius" android:topRightRadius="0dp" />
+            <corners android:radius="0dp" />
             <solid android:color="@color/EkirjastoTabButtonBackgroundColor" />
         </shape>
     </item>

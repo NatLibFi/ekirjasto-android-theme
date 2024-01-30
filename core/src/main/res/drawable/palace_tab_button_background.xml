@@ -3,33 +3,30 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:state_enabled="false">
-        <inset android:insetLeft="@dimen/PalaceTabButtonStrokeInset" android:insetTop="0dp" android:insetRight="@dimen/PalaceTabButtonStrokeInset" android:insetBottom="0dp">
+<!--        <inset android:insetLeft="@dimen/PalaceTabButtonStrokeInset" android:insetTop="0dp" android:insetRight="@dimen/PalaceTabButtonStrokeInset" android:insetBottom="0dp">-->
             <shape android:shape="rectangle">
                 <corners android:radius="0dp" />
-                <solid android:color="@color/PalaceScreenBackgroundColor" />
-                <stroke android:width="@dimen/PalaceTabButtonStrokeThickness" android:color="@color/PalaceButtonOutlinedDisabledTextColor" />
+                <solid android:color="@color/EkirjastoTabButtonBackgroundColor" />
+                <stroke android:width="@dimen/PalaceTabButtonStrokeThickness" android:color="@color/EkirjastoTabButtonBackgroundColor" />
             </shape>
-        </inset>
+<!--        </inset>-->
     </item>
 
     <item android:state_checked="true">
-        <inset android:insetLeft="@dimen/PalaceTabButtonStrokeInset" android:insetTop="0dp" android:insetRight="@dimen/PalaceTabButtonStrokeInset" android:insetBottom="0dp">
-            <shape android:shape="rectangle">
-                <corners android:radius="0dp" />
-                <solid android:color="@color/PalaceInvertedBackgroundColor" />
-                <stroke android:width="@dimen/PalaceTabButtonStrokeThickness" android:color="@color/PalaceInvertedBackgroundColor" />
-            </shape>
-        </inset>
+        <layer-list>
+            <item android:drawable="@drawable/ekirjasto_tab_rectangle" />
+            <item android:drawable="@drawable/ekirjasto_tab_rounded" />
+        </layer-list>
     </item>
 
     <item>
-        <inset android:insetLeft="@dimen/PalaceTabButtonStrokeInset" android:insetTop="0dp" android:insetRight="@dimen/PalaceTabButtonStrokeInset" android:insetBottom="0dp">
+<!--        <inset android:insetLeft="@dimen/PalaceTabButtonStrokeInset" android:insetTop="0dp" android:insetRight="@dimen/PalaceTabButtonStrokeInset" android:insetBottom="0dp">-->
             <shape android:shape="rectangle">
                 <corners android:radius="0dp" />
-                <solid android:color="@color/PalaceScreenBackgroundColor" />
-                <stroke android:width="@dimen/PalaceTabButtonStrokeThickness" android:color="@color/PalacePrimaryForegroundColor" />
+                <solid android:color="@color/EkirjastoTabButtonBackgroundColor" />
+                <stroke android:width="@dimen/PalaceTabButtonStrokeThickness" android:color="@color/EkirjastoTabButtonBackgroundColor" />
             </shape>
-        </inset>
+<!--        </inset>-->
     </item>
 
 </selector>
