@@ -2,7 +2,7 @@
 
 <resources>
     <dimen name="PalaceToolbarHeight">64dp</dimen>
-    <dimen name="PalaceTabButtonCornerRadius">8dp</dimen>
-    <dimen name="PalaceTabButtonStrokeThickness">1dp</dimen>
+    <dimen name="PalaceTabButtonCornerRadius">12dp</dimen>
+    <dimen name="PalaceTabButtonStrokeThickness">4dp</dimen>
     <dimen name="PalaceTabButtonStrokeInset">-1dp</dimen>
 </resources>

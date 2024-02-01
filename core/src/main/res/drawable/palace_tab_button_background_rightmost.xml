@@ -5,24 +5,21 @@
     <item android:state_enabled="false">
         <shape android:shape="rectangle">
             <corners android:bottomLeftRadius="0dp" android:radius="@dimen/PalaceTabButtonCornerRadius" android:topLeftRadius="0dp" />
-            <solid android:color="@color/PalaceScreenBackgroundColor" />
-            <stroke android:width="@dimen/PalaceTabButtonStrokeThickness" android:color="@color/PalaceButtonOutlinedDisabledTextColor" />
+            <solid android:color="@color/EkirjastoTabButtonBackgroundColor" />
         </shape>
     </item>
 
     <item android:state_checked="true">
-        <shape android:shape="rectangle">
-            <corners android:bottomLeftRadius="0dp" android:radius="@dimen/PalaceTabButtonCornerRadius" android:topLeftRadius="0dp" />
-            <solid android:color="@color/PalaceInvertedBackgroundColor" />
-            <stroke android:width="@dimen/PalaceTabButtonStrokeThickness" android:color="@color/PalaceInvertedBackgroundColor" />
-        </shape>
+        <layer-list>
+            <item android:drawable="@drawable/ekirjasto_tab_rectangle_right" />
+            <item android:drawable="@drawable/ekirjasto_tab_rounded" />
+        </layer-list>
     </item>
 
     <item>
         <shape android:shape="rectangle">
             <corners android:bottomLeftRadius="0dp" android:radius="@dimen/PalaceTabButtonCornerRadius" android:topLeftRadius="0dp" />
-            <solid android:color="@color/PalaceScreenBackgroundColor" />
-            <stroke android:width="@dimen/PalaceTabButtonStrokeThickness" android:color="@color/PalacePrimaryForegroundColor" />
+            <solid android:color="@color/EkirjastoTabButtonBackgroundColor" />
         </shape>
     </item>
 

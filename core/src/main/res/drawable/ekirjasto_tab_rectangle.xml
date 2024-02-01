@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<item>
+    <inset android:insetLeft="@dimen/PalaceTabButtonStrokeInset" android:insetTop="0dp" android:insetRight="@dimen/PalaceTabButtonStrokeInset" android:insetBottom="0dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/EkirjastoTabButtonBackgroundColor" />
+        </shape>
+    </inset>
+</item>
+</selector>
