@@ -46,4 +46,11 @@
 
     <!-- Dividers -->
     <color name="PalaceDividerColor">@color/PalaceGrey1</color>
+
+    <!-- TabButtons -->
+    <color name="EkirjastoTabButtonBackgroundColor">@color/EkirjastoBlack</color>
+    <color name="EkirjastoTabButtonDisabledTextColor">@color/EkirjastoGrey</color>
+    <color name="EkirjastoTabTextColorChecked">@color/EkirjastoWhite</color>
+    <color name="EkirjastoTabTextColor">@color/EkirjastoWhite</color>
+
 </resources>
