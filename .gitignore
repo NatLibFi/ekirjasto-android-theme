@@ -26,6 +26,7 @@ LCP/*
 # Misc
 simplified-tests-sandbox/src/main/*
 .env
+configurations.txt
 
 # deprecated
 cardcreator.conf
