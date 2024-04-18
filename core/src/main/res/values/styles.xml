@@ -208,6 +208,24 @@
         <item name="android:drawablePadding">16dp</item>
         -->
     </style>
+    <!-- Login Button Style -->
+    <style name="Palace.Button.Contained.LoginPrimary" parent="Palace.Button.Contained">
+        <item name="strokeWidth">0dp</item>
+        <item name="android:backgroundTint">@color/EkirjastoLightestGreen</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Material3.Corner.None</item>
+        <item name="android:gravity">center</item>
+        <item name="android:drawableRight">@drawable/ekirjasto_arrow_forward</item>
+        <item name="android:drawableTint">@color/EkirjastoGreen</item>
+        <item name="android:insetBottom">4dp</item>
+        <item name="android:insetTop">4dp</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:fontFamily">@font/asap_regular</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="Palace.Button.Contained.LoginSecondary" parent="Palace.Button.Contained.LoginPrimary">
+        <item name="android:backgroundTint">@color/EkirjastoYellow</item>
+        <item name="android:drawableTint">@color/EkirjastoBlack</item>
+    </style>
 
     <!-- The settings style -->
     <style name="Palace.Button.Outlined.Settings" parent="Palace.Button.Outlined.Medium">
