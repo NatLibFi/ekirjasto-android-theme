@@ -53,4 +53,9 @@
     <color name="EkirjastoTabTextColorChecked">@color/EkirjastoWhite</color>
     <color name="EkirjastoTabTextColor">@color/EkirjastoWhite</color>
 
+    <!--- Settings -->
+    <color name="EkirjastoSettingsBackground">#000000</color>
+    <color name="EkirjastoSettingsButtonOutline">@color/EkirjastoBlack</color>
+    <color name="EkirjastoSettingsBookmarkBackground">#000000</color>
+
 </resources>

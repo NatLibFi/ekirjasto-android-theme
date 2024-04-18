@@ -209,6 +209,29 @@
         -->
     </style>
 
+    <!-- The settings style -->
+    <style name="Palace.Button.Outlined.Settings" parent="Palace.Button.Outlined.Medium">
+        <item name="strokeColor">@color/EkirjastoSettingsButtonOutline</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Material3.Corner.None</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:drawableRight">@drawable/ekirjasto_arrow_forward</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:drawableTint">@color/EkirjastoGreen</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:fontFamily">@font/asap_regular</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Palace.TextViewStyle.Settings" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/asap_regular</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingRight">22dp</item>
+        <item name="android:paddingLeft">22dp</item>
+    </style>
+
     <!-- The bottom navigation view. -->
     <style name="Palace.BottomNavigationView" parent="Widget.Material3.BottomNavigationView">
         <item name="materialThemeOverlay">@style/Palace.BottomNavigationView.Overlay</item>
