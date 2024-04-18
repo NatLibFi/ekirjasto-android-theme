@@ -429,6 +429,27 @@
                     android:maxLines="1"
                     android:text="outlinedLargeIconR" />
             </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/ekirjastoLoginButtonPrimary"
+                    style="@style/Palace.Button.Contained.LoginPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="LoginPrimary" />
+
+                <Button
+                    android:id="@+id/ekirjastoLoginButtonSecondary"
+                    style="@style/Palace.Button.Contained.LoginSecondary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="LoginSecondary" />
+
+            </TableRow>
         </TableLayout>
     </ScrollView>
 
