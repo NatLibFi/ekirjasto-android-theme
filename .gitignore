@@ -32,3 +32,7 @@ cardcreator.conf
 overdrive.json
 feedbooks.conf
 ktlint.jar
+
+# Auto-generated, ignore
+configurations.txt
+
