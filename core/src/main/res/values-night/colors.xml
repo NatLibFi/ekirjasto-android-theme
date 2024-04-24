@@ -13,7 +13,7 @@
     <color name="PalaceInvertedBackgroundColor">@color/PalaceGrey3</color>
 
     <!-- Contained buttons. -->
-    <color name="PalaceButtonContainedBackgroundColor">@color/PalaceGrey3</color>
+    <color name="PalaceButtonContainedBackgroundColor">@color/EkirjastoLightestGreen</color>
     <color name="PalaceButtonContainedDisabledBackgroundColor">@color/PalaceGrey1</color>
     <color name="PalaceButtonContainedDisabledTextColor">@color/PalaceGrey0</color>
     <color name="PalaceButtonContainedTextColor">@color/PalaceGrey0</color>

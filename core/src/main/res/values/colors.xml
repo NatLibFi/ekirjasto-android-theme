@@ -13,8 +13,9 @@
     <color name="PalaceInvertedBackgroundColor">@color/EkirjastoBlack</color>
 
     <!-- Contained buttons. -->
-    <color name="PalaceButtonContainedBackgroundColor">@color/EkirjastoLightGreen</color>
+    <color name="PalaceButtonContainedBackgroundColor">@color/EkirjastoLightestGreen</color>
     <color name="PalaceButtonContainedDisabledBackgroundColor">@color/EkirjastoLightestGreen</color>
+    <color name="PalaceButtonContainedStrokeColor">@color/EkirjastoGreen</color>
     <color name="PalaceButtonContainedDisabledTextColor">@color/EkirjastoGrey</color>
     <color name="PalaceButtonContainedTextColor">@color/EkirjastoBlack</color>
 
