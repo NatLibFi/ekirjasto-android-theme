@@ -1,7 +1,3 @@
-[submodule "org.thepalaceproject.android.platform"]
-	path = org.thepalaceproject.android.platform
-	url = https://github.com/NatLibFi/ekirjasto-android-platform
-	branch = ekirjasto
 [submodule ".ci"]
 	path = .ci
 	url = https://www.github.com/ThePalaceProject/android-ci
