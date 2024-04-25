@@ -49,13 +49,14 @@
 
     <!-- TabButtons -->
     <color name="EkirjastoTabButtonBackgroundColor">@color/EkirjastoBlack</color>
+    <color name="EkirjastoTabButtonChecked">@color/EkirjastoGrey</color>
     <color name="EkirjastoTabButtonDisabledTextColor">@color/EkirjastoGrey</color>
-    <color name="EkirjastoTabTextColorChecked">@color/EkirjastoWhite</color>
+    <color name="EkirjastoTabTextColorChecked">@color/PalaceGrey0</color>
     <color name="EkirjastoTabTextColor">@color/EkirjastoWhite</color>
 
     <!--- Settings -->
-    <color name="EkirjastoSettingsBackground">#000000</color>
+    <color name="EkirjastoSettingsBackground">@color/PalaceGrey0</color>
     <color name="EkirjastoSettingsButtonOutline">@color/EkirjastoBlack</color>
-    <color name="EkirjastoSettingsBookmarkBackground">#000000</color>
+    <color name="EkirjastoSettingsBookmarkBackground">@color/PalaceGrey0</color>
 
 </resources>
