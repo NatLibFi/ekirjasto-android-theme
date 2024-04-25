@@ -50,6 +50,7 @@
 
     <!-- TabButtons -->
     <color name="EkirjastoTabButtonBackgroundColor">@color/EkirjastoLightGrey</color>
+    <color name="EkirjastoTabButtonChecked">@color/EkirjastoWhite</color>
     <color name="EkirjastoTabButtonDisabledTextColor">@color/EkirjastoGrey</color>
     <color name="EkirjastoTabTextColorChecked">@color/EkirjastoBlack</color>
     <color name="EkirjastoTabTextColor">@color/EkirjastoBlack</color>
