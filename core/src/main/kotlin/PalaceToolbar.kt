@@ -69,8 +69,8 @@ class PalaceToolbar(
 
     when (this.iconKind) {
       IconKind.ICON_IS_NAVIGATION -> {
-        val iconHeight = this.dpToPixelsReal(24).toFloat()
-        this.iconView.x = this.dpToPixelsReal(16).toFloat()
+        val iconHeight = this.dpToPixelsReal(48).toFloat()
+        this.iconView.x = this.dpToPixelsReal(0).toFloat()
         this.iconView.y = (this.height / 2.0f) - (iconHeight / 2.0f)
       }
       IconKind.ICON_IS_LOGO -> {
@@ -91,15 +91,17 @@ class PalaceToolbar(
     if (drawable != null) {
       this.iconKind = IconKind.ICON_IS_NAVIGATION
       this.iconView.setImageResource(R.drawable.palace_arrow_back_24)
-      val iconWidth = this.dpToPixelsReal(24).toFloat()
-      val iconHeight = this.dpToPixelsReal(24).toFloat()
-      this.iconView.x = this.dpToPixelsReal(16).toFloat()
+      val iconWidth = this.dpToPixelsReal(48).toFloat()
+      val iconHeight = this.dpToPixelsReal(48).toFloat()
+      this.iconView.x = this.dpToPixelsReal(0).toFloat()
       this.iconView.y = (this.height / 2.0f) - (iconHeight / 2.0f)
       this.iconView.layoutParams = LayoutParams(iconWidth.toInt(), iconHeight.toInt())
+      this.iconView.setPadding(24,24,24,24)
       this.iconView.contentDescription = context.getString(R.string.contentDescriptionBack)
     } else {
       this.iconKind = IconKind.ICON_IS_LOGO
       this.setLogo(this.iconLogoLast)
+      this.iconView.setPadding(0,0,0,0)
       this.iconView.contentDescription = context.getString(R.string.contentDescriptionLogo)
     }
   }
