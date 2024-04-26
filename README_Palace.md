@@ -1,34 +1,20 @@
-ekirjasto-android-theme
-=======================
+android-theme
+============
 
-E-kirjasto's Android theme.
+[![Build Status](https://img.shields.io/github/actions/workflow/status/ThePalaceProject/android-theme/.github%2Fworkflows%2Fandroid-main.yml?style=flat-square)](https://github.com/ThePalaceProject/android-theme/actions?query=workflow%3A%22Android+CI+%28Authenticated%29%22)
+[![Maven Central](https://img.shields.io/maven-central/v/org.thepalaceproject.theme/org.thepalaceproject.theme.core?style=flat-square)](https://repo1.maven.org/maven2/org/thepalaceproject/theme)
+[![Maven Central (Snapshots)](https://img.shields.io/nexus/s/org.thepalaceproject.theme/org.thepalaceproject.theme.core?server=https%3A%2F%2Fs01.oss.sonatype.org%2F)](https://oss.sonatype.org/content/repositories/snapshots/org/thepalaceproject/theme/)
+
+The Palace Project's Android theme.
 
 ![theme](./src/site/resources/sandbox.png?raw=true)
 
 ### What Is This?
 
 The contents of this repository define the neutral [Material 3](https://m3.material.io/) theme
-used for the E-kirjasto Android components.
+used for the Palace Android components.
 
 ### Building
-
-The upstream (The Palace Project) version of this repository used to have a submodule
-for managing dependencies, and sharing the same dependencies with the android-core repository.
-However, this makes it more difficult to update those dependencies, since to change a dependency,
-it always requires at least 3 pull requests, one at a time.
-
-For E-kirjasto, we chose to remove the submodule to make it easier to manage dependencies
-in the [ekirjasto-android-core](https://github.com/NatLibFi/ekirjasto-android-core) repository,
-since that is the only place where this module is really used.
-
-In order to build this repository as a standalone test app, it's recommended to clone this
-repository as part of the ekirjasto-android-core repository. You can then open the ekirjasto-theme
-subdirectory as a standalone project, and it will find the dependencies from ekirjasto-android-core.
-
-If you want to clone this repository as a completely standalone project, you will need to clone the
-[ekirjasto-android-platform](https://github.com/NatLibFi/ekirjasto-android-platform) repository into
-one of the paths listed in `settings.gradle.kts`. For example, clone the repo under as a subdirectory
-of this repository.
 
 #### Build!
 
@@ -85,4 +71,3 @@ code is analyzed with respect to the previous version, and incompatible changes 
 require a major version increment. Please see the [VERSIONING.txt](VERSIONING.txt)
 file for the list of packages that are _exempt_ from versioning rules
 due to being private implementation packages.
-
