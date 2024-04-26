@@ -9,7 +9,19 @@ pluginManagement {
 dependencyResolutionManagement {
     versionCatalogs {
         create("libs") {
-            from(files("$rootDir/org.thepalaceproject.android.platform/build_libraries.toml"))
+            val pathsToTry = listOf(
+                "$rootDir/../org.thepalaceproject.android.platform/build_libraries.toml",
+                "$rootDir/../ekirjasto-android-platform/build_libraries.toml",
+                "$rootDir/org.thepalaceproject.android.platform/build_libraries.toml",
+                "$rootDir/ekirjasto-android-platform/build_libraries.toml",
+            )
+            for (pathToTry in pathsToTry) {
+                if (file(pathToTry).exists()) {
+                    println("Using build_libraries.toml from path: $pathToTry")
+                    from(files(pathToTry))
+                    break
+                }
+            }
         }
     }
 

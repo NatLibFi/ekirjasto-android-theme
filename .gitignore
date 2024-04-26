@@ -36,3 +36,7 @@ ktlint.jar
 # Auto-generated, ignore
 configurations.txt
 
+# Ignore old submodule
+org.thepalaceproject.android.platform/
+ekirjasto-android-platform/
+
