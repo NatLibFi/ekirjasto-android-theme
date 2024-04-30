@@ -260,7 +260,12 @@
         <item name="labelVisibilityMode">labeled</item>
         <item name="itemActiveIndicatorStyle">@style/Palace.BottomNavigationView.Indicator</item>
         <item name="itemTextColor">@color/PalaceButtonTextTextColor</item>
+        <item name="itemTextAppearanceInactive">@style/Palace.BottomNavigationView.TextInactive</item>
         <item name="itemTextAppearanceActive">@style/Palace.BottomNavigationView.TextActive</item>
+    </style>
+
+    <style name="Palace.BottomNavigationView.TextInactive" parent="">
+        <item name="android:textSize">12sp</item>
     </style>
 
     <style name="Palace.BottomNavigationView.TextActive" parent="">
