@@ -60,5 +60,6 @@
     <color name="EkirjastoSettingsBackground">@color/EkirjastoLightestGrey</color>
     <color name="EkirjastoSettingsButtonOutline">@color/EkirjastoLightestGrey</color>
     <color name="EkirjastoSettingsBookmarkBackground">@color/EkirjastoWhite</color>
+    <color name="EkirjastoSettingsNatLibFiLogo">@color/PalaceGrey0</color>
 
 </resources>
