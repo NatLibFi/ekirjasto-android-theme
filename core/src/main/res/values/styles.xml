@@ -257,7 +257,7 @@
         <item name="android:paddingLeft">22dp</item>
     </style>
 
-    <style name="Palace.TextViewStyle.Settings.Info" parent="Palace.TextViewStyle.Settings">
+    <style name="Palace.TextViewStyle.Settings.Dark" parent="Palace.TextViewStyle.Settings">
         <item name="android:textColor">@color/palace_button_text_color</item>
         <item name="android:textSize">14sp</item>
     </style>
