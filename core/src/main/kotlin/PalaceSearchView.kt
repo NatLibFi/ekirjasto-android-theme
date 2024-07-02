@@ -46,6 +46,7 @@ class PalaceSearchView(
     this.searchIconOpen.setImageDrawable(
       AppCompatResources.getDrawable(context, R.drawable.palace_search)
     )
+    this.searchIconClose.contentDescription = context.getString(R.string.contentDescriptionClose)
     this.searchIconClose.setImageDrawable(
       AppCompatResources.getDrawable(context, R.drawable.palace_cancel_24)
     )

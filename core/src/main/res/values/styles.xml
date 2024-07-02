@@ -314,6 +314,7 @@
         <item name="colorOnSurface">@color/PalaceTextColor</item>
         <item name="buttonBarPositiveButtonStyle">@style/Palace.MaterialAlertDialog.Button</item>
         <item name="buttonBarNegativeButtonStyle">@style/Palace.MaterialAlertDialog.Button</item>
+        <item name="android:checkedTextViewStyle">@style/Palace.TextViewStyle</item>
     </style>
 
     <style name="Palace.MaterialAlertDialog" parent="MaterialAlertDialog.Material3">
