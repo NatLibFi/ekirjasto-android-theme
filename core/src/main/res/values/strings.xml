@@ -2,6 +2,7 @@
 
 <resources>
     <string name="contentDescriptionBack">Back</string>
-    <string name="contentDescriptionLogo">Logo</string>
+    <string name="contentDescriptionLogo">Return to browse books</string>
+    <string name="contentDescriptionClose">Close search</string>
     <string name="search">Search…</string>
 </resources>
