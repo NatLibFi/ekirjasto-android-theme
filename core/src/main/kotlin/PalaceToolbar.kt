@@ -100,7 +100,12 @@ class PalaceToolbar(
       this.iconView.contentDescription = context.getString(R.string.contentDescriptionBack)
     } else {
       this.iconKind = IconKind.ICON_IS_LOGO
-      this.setLogo(this.iconLogoLast)
+      //In case we reconfigure the toolbar so that iconLogoLast is not set, set the ekirjasto logo
+      if (this.iconLogoLast == null) {
+        this.setLogo(R.drawable.ekirjasto_logo_smaller)
+      } else {
+        this.setLogo(this.iconLogoLast)
+      }
       this.iconView.setPadding(0,0,0,0)
       this.iconView.contentDescription = context.getString(R.string.contentDescriptionLogo)
     }
