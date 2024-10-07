@@ -2,6 +2,7 @@ package org.thepalaceproject.theme.core
 
 import android.content.Context
 import android.graphics.drawable.Drawable
+import android.text.TextUtils
 import android.util.AttributeSet
 import android.view.Gravity
 import android.widget.ImageView
@@ -127,6 +128,12 @@ class PalaceToolbar(
 
   override fun setTitle(title: CharSequence) {
     this.titleView.text = title
+    //If the text is too long for its space, make it scrolling
+    this.titleView.ellipsize = TextUtils.TruncateAt.MARQUEE
+    //Set it as selected, so the text actually scrolls
+    this.titleView.setSelected(true)
+    //Ensure the text remains on one row
+    this.titleView.setSingleLine(true)
   }
 
   private fun getSearchViewFromToolbar(): SearchView? {
