@@ -49,7 +49,7 @@
         <item name="textInputStyle">@style/Palace.TextInputLayout</item>
         <item name="toolbarStyle">@style/Palace.Toolbar</item>
 
-        <item name="android:windowSplashScreenAnimatedIcon">@drawable/palace_splash_animated</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/ekirjasto_logo_invisible</item>
     </style>
 
     <style name="PalaceTheme.WithActionBar" parent="Theme.Material3.DayNight">
@@ -89,6 +89,6 @@
         <item name="textInputStyle">@style/Palace.TextInputLayout</item>
         <item name="toolbarStyle">@style/Palace.Toolbar</item>
 
-        <item name="android:windowSplashScreenAnimatedIcon">@drawable/palace_splash_animated</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/ekirjasto_logo_invisible</item>
     </style>
 </resources>
