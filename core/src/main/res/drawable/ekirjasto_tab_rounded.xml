@@ -5,6 +5,7 @@
             <shape android:shape="rectangle">
                 <corners android:radius="8dp" />
                 <solid android:color="@color/EkirjastoTabButtonChecked" />
+                <stroke android:color="@color/EkirjastoBlack" android:width="1dp"/>
             </shape>
         </inset>
     </item>
