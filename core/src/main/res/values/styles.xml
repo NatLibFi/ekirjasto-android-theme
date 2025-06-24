@@ -313,10 +313,12 @@
 
     <!-- Dialogs. -->
     <style name="Palace.MaterialAlertDialog.Overlay" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="materialAlertDialogBodyTextStyle">@style/Ekirjasto.MaterialAlertDialog.Text</item>
         <item name="alertDialogStyle">@style/Palace.MaterialAlertDialog</item>
         <item name="colorSurface">@color/PalaceDialogBackgroundColor</item>
         <item name="colorOnSurface">@color/PalaceTextColor</item>
         <item name="buttonBarPositiveButtonStyle">@style/Palace.MaterialAlertDialog.Button</item>
+        <item name="buttonBarNeutralButtonStyle">@style/Palace.MaterialAlertDialog.Button</item>
         <item name="buttonBarNegativeButtonStyle">@style/Palace.MaterialAlertDialog.Button</item>
         <item name="android:checkedTextViewStyle">@style/Palace.TextViewStyle</item>
     </style>
@@ -327,6 +329,10 @@
 
     <style name="Palace.MaterialAlertDialog.Button" parent="Widget.Material3.Button.TextButton.Dialog">
         <item name="android:textColor">@color/PalaceTextColor</item>
+    </style>
+
+    <style name="Ekirjasto.MaterialAlertDialog.Text" parent="MaterialAlertDialog.Material3.Body.Text">
+    <item name="android:textColor">@color/PalaceTextColor</item>
     </style>
 
     <!-- Checkboxes. -->
