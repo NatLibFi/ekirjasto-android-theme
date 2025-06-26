@@ -43,7 +43,7 @@
 
     <!-- Text -->
     <color name="PalaceTextColor">@color/EkirjastoBlack</color>
-    <color name="PalaceTextHintColor">@color/EkirjastoLightGrey</color>
+    <color name="PalaceTextHintColor">@color/EkirjastoBlack</color>
     <color name="PalaceTextInvertedColor">@color/EkirjastoWhite</color>
 
     <!-- Dividers -->

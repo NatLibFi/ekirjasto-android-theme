@@ -39,7 +39,8 @@ class PalaceSearchView(
 
   init {
     val textColor = context.getColor(R.color.PalaceTextColor)
-
+    
+    this.searchIconCollapsed.contentDescription = context.getString(R.string.contentDescriptionSearch)
     this.searchIconCollapsed.setImageDrawable(
       AppCompatResources.getDrawable(context, R.drawable.palace_search)
     )

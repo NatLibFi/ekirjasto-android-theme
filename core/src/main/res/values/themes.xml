@@ -20,8 +20,8 @@
         <item name="colorOnBackground">@color/EkirjastoBlack</item>
         <item name="colorError">@color/PalaceError</item>
         <item name="colorOnError">@color/EkirjastoWhite</item>
-        <item name="colorOnSurfaceVariant">@color/EkirjastoLightGreen</item>
-        <item name="colorOnSecondaryContainer">@color/EkirjastoGreen</item>
+        <item name="colorOnSurfaceVariant">@color/EkirjastoGrey</item>
+        <item name="colorOnSecondaryContainer">@color/PalaceTextColor</item>
 
         <!-- The color accent for legacy non-Material components. -->
         <item name="colorAccent">@color/PalaceTextColor</item>

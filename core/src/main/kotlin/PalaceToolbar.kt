@@ -2,6 +2,7 @@ package org.thepalaceproject.theme.core
 
 import android.content.Context
 import android.graphics.drawable.Drawable
+import android.os.Build
 import android.text.TextUtils
 import android.util.AttributeSet
 import android.view.Gravity
@@ -128,6 +129,10 @@ class PalaceToolbar(
 
   override fun setTitle(title: CharSequence) {
     this.titleView.text = title
+    //Mark the title as a heading
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+      this.titleView.isAccessibilityHeading = true
+    }
     //If the text is too long for its space, make it scrolling
     this.titleView.ellipsize = TextUtils.TruncateAt.MARQUEE
     //Set it as selected, so the text actually scrolls

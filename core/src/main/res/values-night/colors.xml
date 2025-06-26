@@ -48,11 +48,11 @@
     <color name="PalaceDividerColor">@color/PalaceGrey1</color>
 
     <!-- TabButtons -->
-    <color name="EkirjastoTabButtonBackgroundColor">@color/EkirjastoBlack</color>
-    <color name="EkirjastoTabButtonChecked">@color/EkirjastoGrey</color>
+    <color name="EkirjastoTabButtonBackgroundColor">@color/EkirjastoGrey</color>
+    <color name="EkirjastoTabButtonChecked">@color/EkirjastoBlack</color>
     <color name="EkirjastoTabButtonDisabledTextColor">@color/EkirjastoGrey</color>
-    <color name="EkirjastoTabTextColorChecked">@color/PalaceGrey0</color>
-    <color name="EkirjastoTabTextColor">@color/EkirjastoWhite</color>
+    <color name="EkirjastoTabTextColorChecked">@color/EkirjastoWhite</color>
+    <color name="EkirjastoTabTextColor">@color/EkirjastoBlack</color>
 
     <!--- Settings -->
     <color name="EkirjastoSettingsBackground">@color/PalaceGrey0</color>
