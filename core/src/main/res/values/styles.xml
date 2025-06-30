@@ -327,8 +327,9 @@
         <item name="shapeAppearance">@style/ShapeAppearance.Material3.SmallComponent</item>
     </style>
 
-    <style name="Palace.MaterialAlertDialog.Button" parent="Widget.Material3.Button.TextButton.Dialog">
+     <style name="Palace.MaterialAlertDialog.Button" parent="Widget.Material3.Button">Add commentMore actions
         <item name="android:textColor">@color/PalaceTextColor</item>
+        <item name="strokeColor">@color/EkirjastoGreen</item>
     </style>
 
     <style name="Ekirjasto.MaterialAlertDialog.Text" parent="MaterialAlertDialog.Material3.Body.Text">
