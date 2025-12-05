@@ -66,6 +66,12 @@
         <item name="android:indeterminateTint">@color/PalaceTextInvertedColor</item>
     </style>
 
+    <style name="Palace.Legacy.LinearProgressIndicator" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:progressTint">@color/PalaceTextColor</item>
+        <item name="android:progressBackgroundTint">@color/PalaceTextColor</item>
+        <item name="android:indeterminateTint">@color/PalaceTextColor</item>
+    </style>
+    
     <style name="Palace.Legacy.LinearProgressIndicator.Inverted" parent="Widget.AppCompat.ProgressBar.Horizontal">
         <item name="android:progressTint">@color/PalaceTextInvertedColor</item>
         <item name="android:progressBackgroundTint">@color/PalaceTextInvertedColor</item>
